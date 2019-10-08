@@ -1,0 +1,262 @@
+body {
+    background: #ac4b6c;
+    padding: 0;
+    margin: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+}
+.header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #593a59;
+    padding: 20px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px; 
+}
+.header .menu .image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.header .menu .text {
+    color: white;
+    font-weight: bold;
+}
+.header .box-logo .logo {
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    letter-spacing: 10px;
+}
+.header .option {
+    display: flex;
+    /* justify-content: center; */
+}
+.header .option .image {
+    width: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.header .menu-content {
+    display: none;
+}
+.header .menu-content .items {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    margin: 0 4px;
+}
+.header .menu-content .items:last-child {
+    margin-right: 15px;
+}
+.main-content {
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+.main-content .nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 40px;
+    writing-mode: vertical-rl;
+    height: 86.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 10;
+}
+.main-content .nav .line {
+    background-color: #bfbfbf;
+    width: 5px;
+    height: 50px;
+    margin: 10px 0;
+}
+.main-content .nav .option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .nav .option .items {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.main-content .nav .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .nav .social .fl {
+    text-transform: uppercase;
+}
+.main-content .nav .social .logo {
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+}
+.main-content .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.main-content .main::before {
+    content: "JOGGER";
+    position: absolute;
+    font-size: 19vw;
+    z-index: 0;
+    color: #912e50;
+    opacity: 0.3;
+    letter-spacing: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+.main-content .main .product {
+    text-align: center;
+    z-index: 10;
+    animation: hideToShow 1s;
+}
+.main-content .main .active {
+    display: block;
+}
+.main-content .main .hidden {
+    display: none;
+}
+.main-content .main .product .title {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    /* font-size: 60px; */
+    font-size: 4vw;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+.main-content .main .product .image {
+    width: 45vw;
+    /* animation: hideToShow 1s; */
+}
+.main-content .main .product .price {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+.main-content .main .product .btn-add-cart {
+    padding: 14px 60px;
+    background-color: #e8a95d;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s;
+}
+.main-content .main .product .btn-add-cart:hover {
+    background-color: white;
+    color: black;
+}
+
+.main-content .direction-btn {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    right: 0;
+    z-index: 11;
+}
+.main-content .direction-btn .btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #ac4b6c;
+    border: 0;
+    padding: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+.main-content .direction-btn .next {
+    box-shadow: -3px -3px 20px #6e1131;
+    background-color: #e8a95d;
+}
+.main-content .direction-btn .next:hover {
+    background-color: #ac4b6c;
+}
+.main-content .direction-btn .next:hover ~ .prev {
+    background-color: #e8a95d;
+}
+.main-content .direction-btn .prev {
+    box-shadow: -3px 3px 20px #6e1131;
+}
+.main-content .direction-btn .prev:hover {
+    background-color: #e8a95d;
+}
+.main-content .direction-btn .btn:focus {
+    outline: 0;
+}
+/* .main-content .direction-btn .btn:hover {
+    background: #e8a95d;
+} */
+.main-content .direction-btn .btn > span {
+    
+}
+.main-content .direction-btn .btn > img {
+    width: 30px;
+    height: 30px;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(172, 75, 108, 1);
+
+}
+.hidden {
+    display: none;
+}
+
+@keyframes hideToShow {
+    from {
+        opacity: 0.4;
+        transform: translate(-50px,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+@media (max-width: 940px) {
+    .main-content .main::before {
+        font-size: 16vw;
+    }
+}
+@media (max-width: 700px) {
+    .main-content .main::before {
+        font-size: 14vw;
+    }
+}
+@media (max-width: 599px) {
+    .main-content .main::before {
+        font-size: 10vw;
+    }
+}
